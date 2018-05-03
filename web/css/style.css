@@ -1,0 +1,46 @@
+@font-face {
+	font-family: "TW cen MT Condensed";
+	src: url("../font/twcenmt.ttf");
+}
+
+html, body{
+	font-family: "TW cen MT Condensed";
+	background: #1e1d2f;
+	color: white;
+	text-align: center;
+}
+
+#home{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+#home img{
+	height: 50px;
+}
+#home select{
+	width: 250px;
+	padding: 14px 5px;
+	margin-right: 10px;
+	border-radius: 1px;
+	border: solid 2px #68e3b9;
+	background: #1e1d2f;
+	color: #68e3b9;
+}
+#home button{
+	background: #68e3b9;
+	border: none;
+	border-radius: 1px;
+	color: #1e1d2f;
+	height: 48px;
+	width: 60px;
+	margin-top: 0px;
+	padding-bottom: 2px;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.green{
+	color: #68e3b9;
+}

@@ -1,0 +1,74 @@
+Options -Indexes
+Options +FollowSymlinks
+RewriteEngine On
+
+#ATTENTION : DECOMMENTER LES 4 LIGNES EN PROD
+#RewriteCond %{HTTPS} off
+#RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+#RewriteCond %{HTTP_HOST} !^www\. [NC]
+#RewriteRule .* https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+DirectoryIndex views/app.php
+RewriteRule ^b([0-9]+)/$ views/app.php [L]
+
+
+
+
+
+RewriteRule ^je-cherche-un-job/inscription/$ views/inscription_demandeur.php [L]
+RewriteRule ^je-cherche-un-job/inscription/([a-zA-Z0-9]+)/$ views/inscription_demandeur.php?code=$1 [L]
+RewriteRule ^je-cherche-un-job/inscription/([0-9]+)/([0-9]+)/([a-zA-Z0-9]+)/$ views/inscription_demandeur.php?log=$1&idmail=$2&codemailing=$3 [L]
+RewriteRule ^je-cherche-un-job/felicitations/$ views/accueil_sans_annonces.php [L]
+RewriteRule ^je-cherche-un-job/$ views/accueil.php [L]
+RewriteRule ^je-cherche-un-job/([0-9]+)/([a-zA-Z0-9]+)/$ views/accueil.php?idmail=$1&codemailing=$2 [L]
+RewriteRule ^ton-compte/$ views/mon_compte.php [L]
+RewriteRule ^ton-compte/([0-9]+)/([a-zA-Z0-9]+)/$ views/mon_compte.php?idmail=$1&codemailing=$2 [L]
+RewriteRule ^tes-atouts/$ views/atouts.php [L]
+RewriteRule ^tes-atouts/([0-9]+)/([a-zA-Z0-9]+)/$ views/atouts.php?idmail=$1&codemailing=$2 [L]
+
+RewriteRule ^deposer-une-annonce-d-emploi/$ views/depot_annonce.php [L]
+RewriteRule ^deposer-une-annonce-d-emploi/([0-9]+)/([0-9]+)/([a-zA-Z0-9]+)/$ views/depot_annonce.php?log=$1&idmail=$2&codemailing=$3 [L]
+RewriteRule ^deposer-une-annonce-d-emploi/([0-9]+)/([a-zA-Z0-9]+)/$ views/depot_annonce.php?idmail=$1&codemailing=$2 [L]
+RewriteRule ^deposer-une-annonce-d-emploi/([0-9]+)/([a-zA-Z0-9]+)/([0-9]+)/$ views/depot_annonce.php?idmail=$1&codemailing=$2&tracking=$3 [L]
+
+RewriteRule ^tes-annonces/$ views/mon_compte_recruteur.php [L]
+RewriteRule ^tes-annonces/([0-9]+)/([a-zA-Z0-9]+)/$ views/mon_compte_recruteur.php?idmail=$1&codemailing=$2 [L]
+RewriteRule ^tes-candidats/([a-zA-Z0-9]+)/$ views/annonce_contacts.php?code=$1 [L]
+RewriteRule ^tes-candidats/([a-zA-Z0-9]+)/liste/$ views/annonce_contacts.php?code=$1&liste=liste [L]
+RewriteRule ^tes-candidats/([a-zA-Z0-9]+)/([0-9]+)/([a-zA-Z0-9]+)/$ views/annonce_contacts.php?code=$1&idmail=$2&codemailing=$3 [L]
+RewriteRule ^tes-candidats/([a-zA-Z0-9]+)/([0-9]+)/([a-zA-Z0-9]+)/liste/$ views/annonce_contacts.php?code=$1&idmail=$2&codemailing=$3&liste=liste [L]
+
+RewriteRule ^cgv/$ views/cgv.php [L]
+RewriteRule ^mentions-legales/$ views/mentions_legales.php [L]
+
+RewriteRule ^desactiver-mon-compte/([0-9]+)/(.*)/$ views/desactivation_compte.php?page=$1&mail=$2 [L]
+RewriteRule ^ne-plus-vouloir-recevoir-la-newsletter/([0-9]+)/([a-zA-Z0-9]+)/$ views/desinscription_newsletter.php?idmail=$1&codemailing=$2 [L]
+RewriteRule ^tu-veux-modifier-ton-mot-de-passe/(.*)/([a-zA-Z0-9]+)$ views/reinit_password.php?mail=$1&code=$2 [L]
+RewriteRule ^ne-plus-recevoir-les-candidatures/([0-9]+)/([a-zA-Z0-9]+)/$ views/desactivation_candidatures.php?idmail=$1&codemailing=$2 [L]
+
+RewriteRule ^je-suis-curieux/$ views/landing_page_curieux.php [L]
+RewriteRule ^je-suis-curieux/([0-9]+)/(.*)$ views/landing_page_curieux.php?newsletter=$1&mail=$2 [L]
+RewriteRule ^solution-pour-recruteurs-pertinents/$ views/landing_page_recruteurs_2.php [L]
+RewriteRule ^pourquoi-deposer-ton-annonce-sur-uprigs/$ views/landing_page_recruteurs.php [L]
+RewriteRule ^decouvre-uprigs/$ views/landing_page_video_m6.php [L]
+
+RewriteRule ^ongconseil/$ views/ongconseil.php [L]
+RewriteRule ^ongconseil/([0-9]+)/([a-zA-Z0-9]+)/$ views/ongconseil.php?idmail=$1&codemailing=$2 [L]
+
+RewriteRule ^victoria/$ victoria/ [L]
+
+RewriteRule ^(.*)/(.*)/(.*)/([a-zA-Z0-9]+)/postuler/$ views/annonce.php?code=$4&action=postuler [L]
+RewriteRule ^(.*)/(.*)/(.*)/([a-zA-Z0-9]+)/([0-9]+)/$ views/annonce.php?code=$4&agregateur=$5 [L]
+RewriteRule ^(.*)/(.*)/(.*)/([a-zA-Z0-9]+)/([0-9]+)/([a-zA-Z0-9]+)/$ views/annonce.php?code=$4&idmail=$5&codemailing=$6 [L]
+RewriteRule ^(.*)/(.*)/(.*)/([a-zA-Z0-9]+)/$ views/annonce.php?code=$4 [L]
+
+RewriteRule ^([0-9]+)/([a-zA-Z0-9]+)/(.*)$ views/homepage.php?newsletter=$1&annonce=$2&mail=$3 [L]
+RewriteRule ^([0-9]+)/(.*)$ views/homepage.php?newsletter=$1&mail=$2 [L]
+
+RewriteRule ^reportage_telenantes.mp4$ web/video/reportage_telenantes.mp4 [L]
+
+RewriteRule ^xml-indeed/$ flux_XML/indeed.xml [L]
+RewriteRule ^xml-jobijoba/$ flux_XML/jobijoba.xml [L]
+RewriteRule ^xml-jooble/$ flux_XML/jooble.xml [L]
+
+ErrorDocument 404 /views/error404.php
