@@ -1,9 +1,10 @@
+<!DOCTYPE html>
 <?php
 
 include_once '../config/constantes.php';
-include_once CONTROLLERS.'app.php';
-include_once HEADER;
-echo CONTROLLERS.'app.php';
+include_once '../controllers/app.php';
+include_once 'reusable/header.php';
+
 ?>
 <div id="view">
 	<div id="home" class="active">
@@ -25,7 +26,8 @@ echo CONTROLLERS.'app.php';
 
 	<div id="data__container">
 		<span class="logo"></span>
-		<?php include REUSABLES.'panel.php'; ?>
+		<div id="arrow__back"><img src="<?= IMG ?>arrow.png" /></div>
+		<?php include 'reusable/panel.php'; ?>
 		<div class="diagram goal">
 
 		</div>
@@ -38,6 +40,6 @@ echo CONTROLLERS.'app.php';
 
 <?php
 
-include_once FOOTER;
+include_once 'reusable/footer.php';
 
 ?>

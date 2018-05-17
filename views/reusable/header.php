@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="fr">
 	<head>
 
@@ -9,11 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<link rel="icon" href="<?= IMG ?>favicon.ico" type="image/x-icon" />
-
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 		<!-- CSS -->
 		<link rel="stylesheet" href="<?= CSS ?>style.css" />
 
 	</head>
 
 	<body>
-lol

@@ -14,5 +14,8 @@
   </div>
   <div class="filter__age">
     Filter by age
+    <span id="slider__min">20</span>
+    <span id="slider__max">40</span>
+    <div id="slider-range"></div>
   </div>
 </div>

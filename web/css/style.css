@@ -15,6 +15,9 @@ html, body{
 button:focus{
 	outline:0;
 }
+span:focus{
+	outline:0;
+}
 
 .logo{
 	font-family: "TW cen MT Condensed";
@@ -198,10 +201,86 @@ input.gender:checked + label.gender, input.gender:checked + label.gender:after {
 	opacity: 1;
 }
 
+#arrow__back{
+	position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+	height: 56px;
+}
+#arrow__back:hover{
+	cursor: pointer;
+}
+
 .filter__age{
 	margin-top: 80px;
 	margin-right: 20px;
 	font-size: 20px;
 	letter-spacing: 1px;
 	text-align: right;
+}
+.filter__age > div{
+	margin: 40px 40px;
+	margin-left: auto;
+}
+.filter__age > span#slider__min{
+	position: absolute;
+	margin-top: 52px;
+	margin-left: -27px;
+}
+.filter__age > span#slider__max{
+	position: absolute;
+	margin-top: 252px;
+	margin-left: -27px;
+}
+.filter__age > span{
+	transition: .2s;
+	opacity: 1;
+}
+.filter__age > span.hidden{
+	opacity: 0;
+}
+.filter__age > span#slider__min.hidden{
+	transform: translateY(-10px);
+}
+.filter__age > span#slider__max.hidden{
+	transform: translateY(10px);
+}
+
+#slider-range{
+	height: 200px;
+	width: 3px;
+	background: #444463;
+	border: none;
+}
+.ui-slider-vertical .ui-slider-handle {
+    left: -.3em;
+    margin-left: 0;
+    margin-bottom: -7px;
+}
+.ui-slider .ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	width: 15px;
+	height: 15px;
+	cursor: default;
+	-ms-touch-action: none;
+	border-radius: 50px;
+	border: none;
+	touch-action: none;
+	background: #68e3b9;
+	box-shadow: 0px 0px 20px rgba(104, 227, 185, .7);
+}
+.ui-slider-vertical .ui-slider-range {
+  left: 0;
+  width: 100%;
+  background: #68e3b9;
+	box-shadow: 0px 0px 20px rgba(104, 227, 185, .7);
+}
+.ui-slider-handle.ui-corner-all.ui-state-default > span{
+	color: white;
+	padding-left: 22px;
+	position: relative;
+	top: -3px;
+	font-family: "TW cen MT Condensed";
+	color: #68e3b9;
 }

@@ -10,8 +10,8 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
 
 }else {
 
-	$sRoot = 'thomas-g.fr/';
-	$sUrl = '/';
+	$sRoot = '/';
+	$sUrl = 'http://www.thomas-g.fr/';
 	$sDossierLocal = '/';
 
 }
