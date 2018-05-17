@@ -1,9 +1,21 @@
 $(document).ready(function() {
 
-  $('#btn__search').click(function(){
-    $('#home').removeClass('active');
-    $('#data__container').addClass('active');
-  });
+    $('#btn__search').click(function(){
+      $('#home').removeClass('active');
+      $('#data__container').addClass('active');
+    });
+    $('#data__container #arrow__back').click(function(){
+      $('#home').addClass('active');
+      $('#data__container').removeClass('active');
+    });
+    $('#learn__more #arrow__back').click(function(){
+      $('#home').addClass('active');
+      $('#learn__more').removeClass('active');
+    });
+    $('#btn__learn__more').click(function(){
+      $('#home').removeClass('active');
+      $('#learn__more').addClass('active');
+    });
 
   $('#button__self-confidence').click(function(){
     $(this).addClass('active');

@@ -11,6 +11,7 @@ html, body{
 	height: 100%;
 	width: 100%;
 	margin: 0;
+	user-select : none;
 }
 button:focus{
 	outline:0;
@@ -18,13 +19,30 @@ button:focus{
 span:focus{
 	outline:0;
 }
+h1{
+	font-weight: normal;
+	font-size: 28px;
+	margin-bottom: 50px;
+}
+.title{
+	font-weight: normal;
+	font-size: 28px;
+	margin-bottom: 50px;
+}
 
 .logo{
 	font-family: "TW cen MT Condensed";
 	color: #68e3b9;
 	text-shadow: 0px 0px 50px rgba(104, 227, 185, 1);
-	font-size: 70px;
+}
+.floatLeft{
 	float: left;
+}
+.fontSize70{
+	font-size: 70px;
+}
+.fontSize110{
+	font-size: 110px;
 }
 .logo:before{
 	content: "Dating";
@@ -46,46 +64,96 @@ span:focus{
 	transition: 1s;
 	transform: translate(-50%,-50%);
 	text-align: center;
-
-	/* REMOVE */
-	display: none;
 }
 #home.active{
 	left: 50%;
 }
-#home img{
-	height: 50px;
+#home > img{
+	height: 500px;
+	margin-bottom: -150px;
+	margin-top: -150px;
 }
 #home select{
+	font-family: "TW cen MT Condensed";
 	width: 250px;
-	padding: 14px 5px;
+	padding: 8px 5px;
 	margin-right: 10px;
+	font-size: 20px;
 	border-radius: 1px;
 	border: solid 2px #68e3b9;
 	background: #1e1d2f;
-	color: #68e3b9;
+	color: white;
 }
 #home button{
+	font-family: "TW cen MT Condensed";
 	background: #68e3b9;
 	border: none;
 	border-radius: 1px;
 	color: #1e1d2f;
-	height: 48px;
+	height: 43px;
 	width: 60px;
 	margin-top: 0px;
 	padding-bottom: 2px;
-	font-weight: bold;
-	font-size: 16px;
+	font-size: 28px;
+}
+#home .search__form{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 75px;
+}
+#home .description{
+	font-family: "TW cen MT Condensed";
+	line-height: 1.5;
+	font-size: 21px;
+	letter-spacing: .5px;
+}
+#home .description span{
+	color: #68e3b9;
+	text-decoration: none;
+}
+#home .description span:hover{
+	cursor: pointer;
+}
+
+
+
+#learn__more{
+	position: absolute;
+	top: 150%;
+	left: 50%;
+	transition: 1s;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	width: 84%;
+}
+#learn__more.active{
+	top: 50%;
+}
+#learn__more > img{
+	height: 500px;
+	margin-bottom: -150px;
+	margin-top: -150px;
+}
+#learn__more .description{
+	font-family: "TW cen MT Condensed";
+	line-height: 1.5;
+	font-size: 21px;
+	letter-spacing: .5px;
+}
+#learn__more .description a{
+	color: #68e3b9;
+	text-decoration: none;
 }
 
 #data__container{
-	height: auto;
-	width: auto;
+	width: 84%;
+	height: 94%;
 	top: 0;
-	margin-left: 0;
-	/* margin-left: 100%; */
+	margin-left: 100%;
 	transition: 1s;
-	padding: 40px 8%;
+	padding: 3% 8%;
+	position: absolute;
 }
 #data__container.active{
 	margin-left: 0;
@@ -100,8 +168,9 @@ span:focus{
 }
 
 .panel{
-	display: block;
-	text-align: right;
+	position: relative;
+	width: fit-content;
+	margin-left: auto;
 }
 .panel button{
 	font-family: "TW cen MT Condensed";
@@ -127,11 +196,11 @@ span:focus{
 }
 
 .outer {
-  margin: 50px;
+	margin: 50px;
 }
 
 .panel button:hover {
-  background-position: left bottom;
+	background-position: left bottom;
 	color: #1e1d2f;
 	cursor: pointer;
 	box-shadow: 0px 0px 20px rgba(104, 227, 185, .7);
@@ -154,17 +223,17 @@ span:focus{
 }
 
 input.gender {
-  padding: 0;
-  height: initial;
-  width: initial;
-  margin-bottom: 0;
-  display: none;
-  cursor: pointer;
+	padding: 0;
+	height: initial;
+	width: initial;
+	margin-bottom: 0;
+	display: none;
+	cursor: pointer;
 }
 
 label.gender {
-  position: relative;
-  cursor: pointer;
+	position: relative;
+	cursor: pointer;
 	opacity: .3;
 	transition: .3s;
 }
@@ -203,8 +272,8 @@ input.gender:checked + label.gender, input.gender:checked + label.gender:after {
 
 #arrow__back{
 	position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+	top: 50%;
+	transform: translateY(-50%);
 	height: 56px;
 }
 #arrow__back:hover{
@@ -253,9 +322,9 @@ input.gender:checked + label.gender, input.gender:checked + label.gender:after {
 	border: none;
 }
 .ui-slider-vertical .ui-slider-handle {
-    left: -.3em;
-    margin-left: 0;
-    margin-bottom: -7px;
+	left: -.3em;
+	margin-left: 0;
+	margin-bottom: -7px;
 }
 .ui-slider .ui-slider-handle {
 	position: absolute;
@@ -271,9 +340,9 @@ input.gender:checked + label.gender, input.gender:checked + label.gender:after {
 	box-shadow: 0px 0px 20px rgba(104, 227, 185, .7);
 }
 .ui-slider-vertical .ui-slider-range {
-  left: 0;
-  width: 100%;
-  background: #68e3b9;
+	left: 0;
+	width: 100%;
+	background: #68e3b9;
 	box-shadow: 0px 0px 20px rgba(104, 227, 185, .7);
 }
 .ui-slider-handle.ui-corner-all.ui-state-default > span{
