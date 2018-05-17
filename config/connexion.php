@@ -2,7 +2,7 @@
 
 //CONNEXION A LA BASE DE DONNEES
 
-if ($_SERVER['SERVER_NAME'] == 'localhost') {
+// if ($_SERVER['SERVER_NAME'] == 'localhost') {
 
 	define ('DB_HOST', 'localhost');
 	define ('DB_DATABASE', 'dating');
@@ -10,7 +10,7 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
 	define ('DB_PASSWORD', '');
 
 //TODO : configurer avant mise en production
-}
+// }
 
 //Fonction de connexion
 function getConnexion() {

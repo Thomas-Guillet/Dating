@@ -7,14 +7,48 @@ html, body{
 	font-family: "TW cen MT Condensed";
 	background: #1e1d2f;
 	color: white;
-	text-align: center;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+button:focus{
+	outline:0;
+}
+
+.logo{
+	font-family: "TW cen MT Condensed";
+	color: #68e3b9;
+	text-shadow: 0px 0px 50px rgba(104, 227, 185, 1);
+	font-size: 70px;
+	float: left;
+}
+.logo:before{
+	content: "Dating";
+}
+
+#view{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 }
 
 #home{
 	position: absolute;
 	top: 50%;
-	left: 50%;
+	left: -50%;
+	transition: 1s;
 	transform: translate(-50%,-50%);
+	text-align: center;
+
+	/* REMOVE */
+	display: none;
+}
+#home.active{
+	left: 50%;
 }
 #home img{
 	height: 50px;
@@ -41,6 +75,133 @@ html, body{
 	font-size: 16px;
 }
 
+#data__container{
+	height: auto;
+	width: auto;
+	top: 0;
+	margin-left: 0;
+	/* margin-left: 100%; */
+	transition: 1s;
+	padding: 40px 8%;
+}
+#data__container.active{
+	margin-left: 0;
+}
+#data__container .diagram{
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+#data__container img.logo{
+	height: 300px;
+}
+
+.panel{
+	display: block;
+	text-align: right;
+}
+.panel button{
+	font-family: "TW cen MT Condensed";
+	text-transform: uppercase;
+	color: white;
+	border: solid 1px #68e3b9;
+	background: none;
+	height: 50px;
+	width: 170px;
+	font-size: 20px;
+	margin: 0px 4px;
+
+	background: linear-gradient(to right, #68e3b9 50%, #1e1d2f 50%);
+	background-size: 200% 100%;
+	background-position: right bottom;
+	transition: all .3s ease-out;
+}
+.panel button.active{
+	background-position: left bottom;
+	color: #1e1d2f;
+	cursor: pointer;
+	box-shadow: 0px 0px 20px rgba(104, 227, 185, .7);
+}
+
+.outer {
+  margin: 50px;
+}
+
+.panel button:hover {
+  background-position: left bottom;
+	color: #1e1d2f;
+	cursor: pointer;
+	box-shadow: 0px 0px 20px rgba(104, 227, 185, .7);
+}
+
 .green{
 	color: #68e3b9;
+}
+
+
+.filter__gender{
+	margin-top: 80px;
+	margin-right: 20px;
+	font-size: 20px;
+	letter-spacing: 1px;
+	text-align: right;
+}
+.filter__gender div{
+	margin: 35px 10px;
+}
+
+input.gender {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+label.gender {
+  position: relative;
+  cursor: pointer;
+	opacity: .3;
+	transition: .3s;
+}
+
+label.gender:after {
+	content: '';
+	-webkit-appearance: none;
+	border-radius: 50px;
+	padding: 3px;
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	cursor: pointer;
+	margin-left: 20px;
+	opacity: .3;
+}
+label.gender.women{
+	color: #fc3d81;
+}
+label.gender.men{
+	color: #009eff;
+}
+label.gender.women:after{
+	background-color: #FC3D81;
+	box-shadow: 0px 0px 7px 3px #FC3D81;
+}
+label.gender.men:after{
+	background-color: #009eff;
+	box-shadow: 0px 0px 7px 3px #009eff;
+}
+
+input.gender:checked + label.gender, input.gender:checked + label.gender:after {
+	content: '';
+	opacity: 1;
+}
+
+.filter__age{
+	margin-top: 80px;
+	margin-right: 20px;
+	font-size: 20px;
+	letter-spacing: 1px;
+	text-align: right;
 }

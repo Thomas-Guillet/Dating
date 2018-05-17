@@ -8,7 +8,12 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
 	$sUrl = 'http://localhost/dating/';
 	$sDossierLocal = 'dating/';
 
-//TODO : configurer avant mise en production
+}else {
+
+	$sRoot = 'thomas-g.fr/';
+	$sUrl = '/';
+	$sDossierLocal = '/';
+
 }
 
 define ('ROOT', $sRoot);

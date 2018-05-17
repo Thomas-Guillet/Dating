@@ -1,19 +1,18 @@
 <?php
-
 include_once 'config.php';
 
 //CONSTANTES
 
 define ('SESSION', 'dating');
 define ('CONNEXION', ROOT.'config/connexion.php');
-
 define ('MODELS', ROOT.'models/');
 define ('CONTROLLERS', ROOT.'controllers/');
 define ('VIEWS', ROOT.'views/');
+define ('REUSABLES', VIEWS.'reusable/');
 define ('MAILS', ROOT.'mails/');
 
-define ('HEADER', VIEWS.'reusable/header.php');
-define ('FOOTER', VIEWS.'reusable/footer.php');
+define ('HEADER', REUSABLES.'header.php');
+define ('FOOTER', REUSABLES.'footer.php');
 
 define ('WEB', URL.'web/');
 define ('CSS', WEB.'css/');
