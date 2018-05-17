@@ -50,12 +50,9 @@ include_once 'reusable/header.php';
 		<span class="logo floatLeft	fontSize70"></span>
 		<div id="arrow__back"><img src="<?= IMG ?>arrow.png" /></div>
 		<?php include 'reusable/panel.php'; ?>
-		<div class="diagram goal">
-
-		</div>
-		<div class="diagram self__confidence">
-
-		</div>
+		<div class="diagram goal"></div>
+		<div class="diagram self__confidence"></div>
+		<?php include 'reusable/loader.php'; ?>
 	</div>
 </div>
 
