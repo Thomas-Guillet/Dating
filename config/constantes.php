@@ -17,6 +17,7 @@ define ('FOOTER', REUSABLES.'footer.php');
 define ('WEB', URL.'web/');
 define ('CSS', WEB.'css/');
 define ('JS', WEB.'js/');
+define ('RESSOURCES', WEB.'ressources/');
 define ('AJAX', WEB.'js/ajax/');
 
 define ('IMG', WEB.'img/');

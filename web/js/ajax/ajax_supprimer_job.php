@@ -1,9 +1,7 @@
 <?php
 
 include_once '../../../config/constantes.php';
-include_once CONNEXION;
-include_once MODELS.'comptes_jobs.php';
-include_once CONTROLLERS.'fonctions.php';
+include_once CONTROLLERS.'functions.php';
 
 $iIdJob = $_POST['iIdJob'];
 $iIdCompte = getIdCompteByIdJob($iIdJob)['id_compte'];

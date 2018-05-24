@@ -18,4 +18,5 @@
     <span id="slider__max">40</span>
     <div id="slider-range"></div>
   </div>
+  <button id="button__render" class="marginLeft225 marginTop40 small">Update</button>
 </div>

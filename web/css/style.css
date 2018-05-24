@@ -24,6 +24,12 @@ h1{
 	font-size: 28px;
 	margin-bottom: 50px;
 }
+.marginLeft225{
+	margin-left: 225px !important;
+}
+.marginTop40{
+	margin-top: 40px !important;
+}
 .title{
 	font-weight: normal;
 	font-size: 28px;
@@ -163,18 +169,252 @@ h1{
 	margin-left: 0;
 }
 #data__container .diagram{
-	position: relative;
-	height: 100%;
-	width: 100%;
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 #data__container img.logo{
 	height: 300px;
+}
+
+#data__container > .diagram.goal{
+	opacity: 1;
+	transition: .5s;
+}
+#data__container > .diagram.goal.hide{
+	opacity: 0;
+}
+#data__container > .diagram.goal > .label{
+	position: absolute;
+	top: 300px;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	height: 100px;
+	width: 100px;
+	background: #1e1d2f;
+	border: solid 3px #21213A;
+	border-radius: 50px;
+}
+#data__container > .diagram.goal > .label > span{
+	text-transform: uppercase;
+	color: #68e3b9;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 20px;
+}
+
+.text__self__confidence{
+	color: white;
+	position: absolute;
+	top: 175px;
+	left: -200px;
+	letter-spacing: .5px;
+	font-size: 20px;
+	line-height: 30px;
+	transition: 1s;
+	opacity: 0;
+}
+.text__self__confidence.show{
+	left: 8%;
+	opacity: 1;
+}
+.label__self__confidence{
+	position: absolute;
+	top: -100px;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 100px;
+	width: 100px;
+	background: #1e1d2f;
+	border: solid 3px #21213A;
+	border-radius: 50px;
+	transition: 1s;
+}
+.label__self__confidence.show{
+	top: 3%;
+}
+.label__self__confidence > span{
+	text-transform: uppercase;
+	color: #68e3b9;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 20px;
+}
+#data__container > .diagram.self__confidence{
+	width: 630px;
+	height: 90%;
+	font-size: 22px;
+	position: absolute;
+	top: 200%;
+	transition: 1s;
+}
+#data__container > .diagram.self__confidence.show{
+	top: 50%;
+}
+#data__container > .diagram.self__confidence > .array{
+	width: 600px;
+	height: 100%;
+	margin-left: 30px;
+}
+#data__container > .diagram.self__confidence > .array > .line{
+	background: #292942;
+	width: 600px;
+	height: 2px;
+	border-radius: 5px;
+	position: absolute;
+}
+#data__container > .diagram.self__confidence > .array > .line.one{
+	height: 3px;
+	bottom: 30px;
+	background: #3b3b54;
+}
+#data__container > .diagram.self__confidence > .array > .line.two{
+	bottom: 145px;
+}
+#data__container > .diagram.self__confidence > .array > .line.three{
+	bottom: 260px;
+}
+#data__container > .diagram.self__confidence > .array > .line.four{
+	bottom: 375px;
+}
+#data__container > .diagram.self__confidence > .array > .line.five{
+	bottom: 490px;
+}
+#data__container > .diagram.self__confidence > .array > .line.six{
+	bottom: 605px;
+}
+#data__container > .diagram.self__confidence > .array > .line.seven{
+	bottom: 720px;
+}
+#data__container > .diagram.self__confidence > .array > .horizontal__label{
+	position: absolute;
+  height: 100%;
+  width: 600px;
+	color: white;
+	pointer-events: none;
+}
+#data__container > .diagram.self__confidence > .array > .horizontal__label > .left{
+	position: absolute;
+	transform: translateX(-50%);
+	bottom: 0;
+	left: 0;
+}
+#data__container > .diagram.self__confidence > .array > .horizontal__label > .middle{
+	position: absolute;
+	transform: translateX(-50%);
+	bottom: 0;
+	left: 50%;
+}
+#data__container > .diagram.self__confidence > .array > .horizontal__label > .right{
+	position: absolute;
+	transform: translateX(-50%);
+	bottom: 0;
+	left: 100%;
+}
+#data__container > .diagram.self__confidence > .array > .vertical__label{
+	position: absolute;
+  height: 100%;
+  width: 600px;
+	color: #3b3b54;
+	pointer-events: none;
+}
+#data__container > .diagram.self__confidence > .array > .vertical__label > .one{
+	position: absolute;
+	bottom: 145px;
+	left: 0;
+	transform: translate(-30px,50%);
+}
+#data__container > .diagram.self__confidence > .array > .vertical__label > .two{
+	position: absolute;
+	bottom: 260px;
+	left: 0;
+	transform: translate(-30px,50%);
+}
+#data__container > .diagram.self__confidence > .array > .vertical__label > .three{
+	position: absolute;
+	bottom: 375px;
+	left: 0;
+	transform: translate(-30px,50%);
+}
+#data__container > .diagram.self__confidence > .array > .vertical__label > .four{
+	position: absolute;
+	bottom: 490px;
+	left: 0;
+	transform: translate(-30px,50%);
+}
+#data__container > .diagram.self__confidence > .array > .vertical__label > .five{
+	position: absolute;
+	bottom: 605px;
+	left: 0;
+	transform: translate(-30px,50%);
+}
+#data__container > .diagram.self__confidence > .array > .vertical__label > .six{
+	position: absolute;
+	bottom: 720px;
+	left: 0;
+	transform: translate(-30px,50%);
+}
+#data_render{
+	height: 100%;
+	margin-left: 30px;
+	width: 600px;
+	bottom: 30px;
+	position: absolute;
+	display: -webkit-inline-box;
+	overflow: hidden;
+	opacity: 1;
+	transition: 1s;
+}
+#data_render.hide{
+	opacity: 0;
+}
+#data_render > div{
+	height: 10px;
+	width: 30px;
+	position: relative;
+	top: 100%;
+	height: 690px;
+	transform: translateY(-100%)rotate(180deg);
+}
+#data_render > div > .bullet{
+	width: 23px;
+	height: 23px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+#data_render > div > .bullet > div{
+	border-radius: 50px;
+	height: 8px;
+	background: red;
+	width: 8px;
+	box-shadow: 0px 0px 7px 3px red;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+#data_render > div > .bullet.men > div{
+	background: #009eff;
+	box-shadow: 0px 0px 7px 3px #009eff;
+}
+#data_render > div > .bullet.women > div{
+	background: #fc3d81;
+	box-shadow: 0px 0px 7px 3px #fc3d81;
 }
 
 .panel{
 	position: relative;
 	width: fit-content;
 	margin-left: auto;
+	z-index: 9999;
 }
 .panel button{
 	font-family: "TW cen MT Condensed";
@@ -191,6 +431,10 @@ h1{
 	background-size: 200% 100%;
 	background-position: right bottom;
 	transition: all .3s ease-out;
+}
+.panel button.small{
+	height: 40px;
+	width: 130px;
 }
 .panel button.active{
 	background-position: left bottom;
@@ -360,11 +604,23 @@ input.gender:checked + label.gender, input.gender:checked + label.gender:after {
 
 #loader{
 	position: absolute;
+	background: #1e1d2f;
+	height: 100%;
+	width: 100%;
+	transition: 1s;
+	opacity: 1;
+}
+#loader.hide{
+	opacity: 0;
+}
+#loader > .content{
+	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
+	width: 139px;
 }
-#loader > .piece{
+#loader > .content > .piece{
 	position: absolute;
 	width: 10px;
 	height: 10px;
@@ -373,8 +629,8 @@ input.gender:checked + label.gender, input.gender:checked + label.gender:after {
 	margin: 0px 1px;
 	top: -5px;
 }
-#loader > .piece.one{
-	height: 30px;
+#loader > .content > .piece.one{
+	height: 10px;
 	animation: piece-0 3.2s infinite;
 	animation-delay:0;
 	left: 0;
@@ -390,8 +646,8 @@ input.gender:checked + label.gender, input.gender:checked + label.gender:after {
 		top: -15px;
 	}
 }
-#loader > .piece.two{
-	height: 60px;
+#loader > .content > .piece.two{
+	height: 10px;
 	animation: piece-1 3.2s infinite;
 	animation-delay: 0.15s;
 	left: 16px;
@@ -407,8 +663,8 @@ input.gender:checked + label.gender, input.gender:checked + label.gender:after {
 	top: -31px;
  }
 }
-#loader > .piece.three{
-	height: 80px;
+#loader > .content > .piece.three{
+	height: 10px;
 	animation: piece-2 3.2s infinite;
 	animation-delay: 0.30s;
 	left: 32px;
@@ -424,8 +680,8 @@ input.gender:checked + label.gender, input.gender:checked + label.gender:after {
 	top: -37px;
  }
 }
-#loader > .piece.four{
-	height: 90px;
+#loader > .content > .piece.four{
+	height: 10px;
 	animation: piece-3 3.2s infinite;
 	animation-delay: 0.45s;
 	left: 48px;
@@ -441,8 +697,8 @@ input.gender:checked + label.gender, input.gender:checked + label.gender:after {
 	top: -31px;
  }
 }
-#loader > .piece.five{
-	height: 94px;
+#loader > .content > .piece.five{
+	height: 10px;
 	animation: piece-4 3.2s infinite;
 	animation-delay: 0.60s;
 	left: 64px;
@@ -458,29 +714,29 @@ input.gender:checked + label.gender, input.gender:checked + label.gender:after {
 	top: -23px;
  }
 }
-#loader > .piece.six{
-	height: 90px;
+#loader > .content > .piece.six{
+	height: 10px;
 	animation: piece-3 3.2s infinite;
 	animation-delay: 0.85s;
 	left: 80px;
 	background: #009EFF;
 }
-#loader > .piece.seven{
-	height: 80px;
+#loader > .content > .piece.seven{
+	height: 10px;
 	animation: piece-2 3.2s infinite;
 	animation-delay: 1s;
 	left: 96px;
 	background: #FC3D81;
 }
-#loader > .piece.eight{
-	height: 60px;
+#loader > .content > .piece.eight{
+	height: 10px;
 	animation: piece-1 3.2s infinite;
 	animation-delay: 1.15s;
 	left: 112px;
 	background: #009EFF;
 }
-#loader > .piece.nine{
-	height: 30px;
+#loader > .content > .piece.nine{
+	height: 10px;
 	animation: piece-0 3.2s infinite;
 	animation-delay: 1.30s;
 	left: 128px;

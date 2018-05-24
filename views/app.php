@@ -50,12 +50,73 @@ include_once 'reusable/header.php';
 		<span class="logo floatLeft	fontSize70"></span>
 		<div id="arrow__back"><img src="<?= IMG ?>arrow.png" /></div>
 		<?php include 'reusable/panel.php'; ?>
-		<div class="diagram goal"></div>
-		<div class="diagram self__confidence"></div>
-		<?php include 'reusable/loader.php'; ?>
+		<div id="diagram__goal" class="diagram goal">
+			<div class="label">
+				<span>Creative<br />art</span>
+			</div>
+			<canvas id="myCanvas" width="600" height="600" ></canvas>
+		</div>
+		<div id="text__self__confidence" class="text__self__confidence">
+			Before the speed-dating, we asked<br />
+			50 people to answer this question :<br /><br />
+			Out of the 20 people you will meet,<br />
+			how many do you expect will be<br />
+			interestedin dating you ?
+		</div>
+		<div id="label__self__confidence" class="label__self__confidence">
+			<span>Creative<br />art</span>
+		</div>
+		<div id="diagram__self__confidence" class="diagram self__confidence">
+
+			<div id="data_render" class="hide">
+				<div id="column-1"></div>
+				<div id="column-2"></div>
+				<div id="column-3"></div>
+				<div id="column-4"></div>
+				<div id="column-5"></div>
+				<div id="column-6"></div>
+				<div id="column-7"></div>
+				<div id="column-8"></div>
+				<div id="column-9"></div>
+				<div id="column-10"></div>
+				<div id="column-11"></div>
+				<div id="column-12"></div>
+				<div id="column-13"></div>
+				<div id="column-14"></div>
+				<div id="column-15"></div>
+				<div id="column-16"></div>
+				<div id="column-17"></div>
+				<div id="column-18"></div>
+				<div id="column-19"></div>
+				<div id="column-20"></div>
+			</div>
+			<div class="array">
+				<div class="horizontal__label">
+					<span class="left">0</span>
+					<span class="middle">10</span>
+					<span class="right">20</span>
+				</div>
+				<div class="vertical__label">
+					<span class="one">5</span>
+					<span class="two">10</span>
+					<span class="three">15</span>
+					<span class="four">20</span>
+					<span class="five">25</span>
+					<span class="six">30</span>
+				</div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</div>
 	</div>
 </div>
 
+<?php include 'reusable/loader.php'; ?>
 
 <?php
 

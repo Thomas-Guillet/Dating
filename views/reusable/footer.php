@@ -5,14 +5,13 @@
 
 <!-- Scripts -->
 <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous">
+  src="<?= JS ?>jquery-3.3.1.min.js">
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
+<script src="<?= JS ?>TweenMax.min.js"></script>
+<script src="<?= JS ?>jquery-ui.js"></script>
 <script src="<?= JS ?>global.js"></script>
+<script src="<?= JS ?>pie-chart.js"></script>
 
 
 </body>
