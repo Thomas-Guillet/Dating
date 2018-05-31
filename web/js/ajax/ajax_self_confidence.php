@@ -37,7 +37,7 @@ foreach ($aData as $aPeople) {
   $sPeopleCareer = $aPeople['career'];
 
   if(in_array($sGender, $aGender) && $sPeopleCareer == $sCareer) {
-    if($iAge > $iMinAge && $iAge < $iMaxAge) {
+    if($iAge >= $iMinAge && $iAge <= $iMaxAge) {
 
       $iExpNum = $aPeople['expnum'];
       $aResult[$iExpNum][$sGender][] = true;

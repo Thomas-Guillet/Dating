@@ -12,7 +12,7 @@
 <script src="<?= JS ?>jquery-ui.js"></script>
 <script src="<?= JS ?>global.js"></script>
 <script src="<?= JS ?>pie-chart.js"></script>
-
+<script src="<?= JS ?>circletype.min.js"></script>
 
 </body>
 </html>

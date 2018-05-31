@@ -742,3 +742,73 @@ input.gender:checked + label.gender, input.gender:checked + label.gender:after {
 	left: 128px;
 	background: #FC3D81;
 }
+
+.label__circle{
+	position: absolute;
+	width: 300px;
+	height: 400px;
+	margin-left: 150px;
+	bottom: 303px;
+	transform-origin: bottom;
+}
+.label__circle.rotate0{
+	transform: rotate(0deg);
+}
+.label__circle.rotate60{
+	transform: rotate(60deg);
+}
+.label__circle.rotate120{
+	transform: rotate(120deg);
+}
+.label__circle.rotate180{
+	transform: rotate(180deg);
+}
+.label__circle.rotate240{
+	transform: rotate(240deg);
+}
+.label__circle.rotate300{
+	transform: rotate(300deg);
+}
+.label__circle > div{
+	text-align: center;
+}
+.label__circle.rotate120 .perc{
+	transform: rotate(180deg);
+}
+.label__circle.rotate180 .perc{
+	transform: rotate(180deg);
+}
+.label__circle.rotate240 .perc{
+	transform: rotate(180deg);
+}
+.label__circle.rotate120 .gender__perc{
+	transform: rotate(180deg);
+}
+.label__circle.rotate180 .gender__perc{
+	transform: rotate(180deg);
+}
+.label__circle.rotate240 .gender__perc{
+	transform: rotate(180deg);
+}
+.label__circle.rotate120 .label{
+	transform: rotate(180deg);
+}
+.label__circle.rotate180 .label{
+	transform: rotate(180deg);
+}
+.label__circle.rotate240 .label{
+	transform: rotate(180deg);
+}
+
+.label__circle .perc{
+	font-size: 44px;
+}
+.label__circle .gender__perc{
+	color: #fc3d81;
+	font-size: 25px;
+	margin-top: -10px;
+}
+.label__circle .label{
+	font-size: 18px;
+	text-transform: uppercase;
+}

@@ -129,6 +129,21 @@ $(document).ready(function() {
 
 
   $('#button__render').click(getDataSelfConfidence);
+  $('#button__render').click(generatePieChart);
+
+  var radius = 150;
+  // var perc = document.querySelectorAll('.perc');
+  //
+  // for (i = 0; i < perc.length; ++i) {
+  //   perc[i]
+  //   new CircleType(  perc[i]).radius(radius);
+  // }
+  // new CircleType(document.getElementById('pie-label-1')).radius(radius);
+  // new CircleType(document.getElementById('pie-label-2')).radius(radius);
+  // new CircleType(document.getElementById('pie-label-3')).radius(radius);
+  // new CircleType(document.getElementById('pie-label-4')).radius(radius);
+  // new CircleType(document.getElementById('pie-label-5')).radius(radius);
+  // new CircleType(document.getElementById('pie-label-6')).radius(radius);
 
 
 })

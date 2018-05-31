@@ -54,6 +54,53 @@ include_once 'reusable/header.php';
 			<div class="label">
 				<span>Creative<br />art</span>
 			</div>
+			<div class="label__circle">
+				<div id="pie-label-1">
+					<div class="perc">40 %</div>
+					<div class="gender__perc">40 %</div>
+					<div class="label">seem like a fun night out</div>
+				</div>
+			</div>
+
+			<div class="label__circle rotate60">
+				<div id="pie-label-2">
+					<div class="perc">40 %</div>
+					<div class="gender__perc">40 %</div>
+					<div class="label">seem like a fun night out</div>
+				</div>
+			</div>
+
+			<div class="label__circle rotate120">
+				<div id="pie-label-3">
+					<div class="perc">40 %</div>
+					<div class="gender__perc">40 %</div>
+					<div class="label">seem like a fun night out</div>
+				</div>
+			</div>
+
+			<div class="label__circle rotate180">
+				<div id="pie-label-4">
+					<div class="perc">40 %</div>
+					<div class="gender__perc">40 %</div>
+					<div class="label">seem like a fun night out</div>
+				</div>
+			</div>
+
+			<div class="label__circle rotate240">
+				<div id="pie-label-5">
+					<div class="perc">40 %</div>
+					<div class="gender__perc">40 %</div>
+					<div class="label">seem like a fun night out</div>
+				</div>
+			</div>
+
+			<div class="label__circle rotate300">
+				<div id="pie-label-6">
+					<div class="perc">40 %</div>
+					<div class="gender__perc">40 %</div>
+					<div class="label">seem like a fun night out</div>
+				</div>
+			</div>
 			<canvas id="myCanvas" width="600" height="600" ></canvas>
 		</div>
 		<div id="text__self__confidence" class="text__self__confidence">
