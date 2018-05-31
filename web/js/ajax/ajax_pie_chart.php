@@ -4,7 +4,7 @@ include_once '../../../config/constantes.php';
 include_once CONTROLLERS.'functions.php';
 
 // set filters
-$sCareer = 'Lawyer';
+$sCareer = $_POST['sCareer'];
 $iGender = $_POST['iGender'];
 $iMinAge = $_POST['iMinAge'];
 $iMaxAge = $_POST['iMaxAge'];

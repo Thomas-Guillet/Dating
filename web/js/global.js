@@ -21,10 +21,15 @@ $(document).ready(function() {
     var iMinAge = 60 - $( "#slider-range" ).slider( "values", 1 );
     var iMaxAge = 60 - $( "#slider-range" ).slider( "values", 0 );
 
+    var sCareer = $('#career-selected').val();
+
+    $('#label__self__confidence > span').html(sCareer);
+
     var dataObject = {
       iGender: iGender,
       iMaxAge: iMaxAge,
       iMinAge: iMinAge,
+      sCareer: sCareer,
     };
     var xhr = $.ajax({
       method: 'post',
@@ -51,8 +56,14 @@ $(document).ready(function() {
   }, 1000);
 
   $('#btn__search').click(function(){
-    $('#home').removeClass('active');
-    $('#data__container').addClass('active');
+    $('#career-selected').val($('#career').val());
+    $('#btn__search').attr('disabled',true);
+    setTimeout(function() {
+      $('#btn__search').attr('disabled',false);
+      $('#home').removeClass('active');
+      $('#data__container').addClass('active');
+    }, 1000);
+
   });
   $('#data__container #arrow__back').click(function(){
     $('#home').addClass('active');
@@ -101,7 +112,7 @@ $(document).ready(function() {
       range: true,
       min: 20,
       max: 40,
-      values: [ 25, 32 ],
+      values: [ 20, 40 ],
       orientation: "vertical",
       slide: function( event, ui ) {
         $( "#amount" ).val( (40 - (ui.values[ 0 ] )) + " - " + (60 - (ui.values[ 1 ] )));
@@ -130,8 +141,11 @@ $(document).ready(function() {
 
   $('#button__render').click(getDataSelfConfidence);
   $('#button__render').click(generatePieChart);
+  $('#btn__search').click(getDataSelfConfidence);
+  $('#btn__search').click(generatePieChart);
 
-  var radius = 150;
+
+  // var radius = 150;
   // var perc = document.querySelectorAll('.perc');
   //
   // for (i = 0; i < perc.length; ++i) {

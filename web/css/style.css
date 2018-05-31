@@ -392,9 +392,9 @@ h1{
 }
 #data_render > div > .bullet > div{
 	border-radius: 50px;
-	height: 8px;
+	height: 6px;
 	background: red;
-	width: 8px;
+	width: 6px;
 	box-shadow: 0px 0px 7px 3px red;
 	position: absolute;
 	top: 50%;
@@ -403,11 +403,11 @@ h1{
 }
 #data_render > div > .bullet.men > div{
 	background: #009eff;
-	box-shadow: 0px 0px 7px 3px #009eff;
+	box-shadow: 0px 0px 10px 1px #009eff;
 }
 #data_render > div > .bullet.women > div{
 	background: #fc3d81;
-	box-shadow: 0px 0px 7px 3px #fc3d81;
+	    box-shadow: 0px 0px 10px 1px #fc3d81;
 }
 
 .panel{
@@ -506,11 +506,11 @@ label.gender.men{
 }
 label.gender.women:after{
 	background-color: #FC3D81;
-	box-shadow: 0px 0px 7px 3px #FC3D81;
+	box-shadow: 0px 0px 10px 1px #FC3D81;
 }
 label.gender.men:after{
 	background-color: #009eff;
-	box-shadow: 0px 0px 7px 3px #009eff;
+	box-shadow: 0px 0px 10px 1px #009eff;
 }
 
 input.gender:checked + label.gender, input.gender:checked + label.gender:after {

@@ -13,22 +13,35 @@ function generatePieChart(){
   var iMinAge = 60 - $( "#slider-range" ).slider( "values", 1 );
   var iMaxAge = 60 - $( "#slider-range" ).slider( "values", 0 );
 
+  var sCareer = $('#career-selected').val();
+
+  $('#label__pie__chart > span').html(sCareer);
+
   var dataObject = {
     iGender: iGender,
     iMaxAge: iMaxAge,
     iMinAge: iMinAge,
+    sCareer: sCareer,
   };
   var xhr = $.ajax({
     method: 'post',
     url: $('#ajax').val()+'ajax_pie_chart.php',
     data: dataObject,
     success: function(data) {
-
-
-      if(data == 'success'){
-
-
-
+      var aData = JSON.parse(data);
+      console.log(aData[1]['Total']);
+        $('#pie-label-1 .perc').html(aData[1]['Total']+' %');
+        $('#pie-label-2 .perc').html(aData[2]['Total']+' %');
+        $('#pie-label-3 .perc').html(aData[3]['Total']+' %');
+        $('#pie-label-4 .perc').html(aData[4]['Total']+' %');
+        $('#pie-label-5 .perc').html(aData[5]['Total']+' %');
+        $('#pie-label-6 .perc').html(aData[6]['Total']+' %');
+        $('#pie-label-1 .gender__perc').html(aData[1]['F']+' %');
+        $('#pie-label-2 .gender__perc').html(aData[2]['F']+' %');
+        $('#pie-label-3 .gender__perc').html(aData[3]['F']+' %');
+        $('#pie-label-4 .gender__perc').html(aData[4]['F']+' %');
+        $('#pie-label-5 .gender__perc').html(aData[5]['F']+' %');
+        $('#pie-label-6 .gender__perc').html(aData[6]['F']+' %');
 
           var data = [{
             value: 100,
@@ -68,6 +81,20 @@ function generatePieChart(){
           var indent = 0;
           for (obj of data) {
             indent = indent + 1;
+            if(indent == 1){
+              iGoal = 3;
+            }else if(indent == 2){
+              iGoal = 4;
+            }else if(indent == 3){
+              iGoal = 5;
+            }else if(indent == 4){
+              iGoal = 6;
+            }else if(indent == 5){
+              iGoal = 1;
+            }else if(indent == 6){
+              iGoal = 2;
+            }
+
             previousRadian = previousRadian || 0;
             obj.percentage = parseInt((obj.value / total) * 100)
             ctx.fillStyle = '#1e1d2f';
@@ -87,7 +114,7 @@ function generatePieChart(){
 
 
             obj.points = [];
-            for (var i = 1; i < 101; i++) {
+            for (var i = 1; i < (aData[iGoal]['Total']+1); i++) {
               var nbTry = 0;
               var state = false;
               while (state == false) {
@@ -153,8 +180,11 @@ function generatePieChart(){
 
             for (var i in obj.points){
               if (typeof obj.points[i] !== 'function') {
-                var randColor = Math.round(Math.random());
-                if(randColor == 1){
+                var randColor = Math.random();
+
+                var iPercRand = aData[iGoal]['M'] / 100;
+
+                if(randColor > iPercRand){
                   ctx.shadowColor = '#fc3d81';
                   ctx.fillStyle = "#fc3d81";
                 }else{
@@ -175,7 +205,6 @@ function generatePieChart(){
 
 
 
-      }
 
 
     }

@@ -11,7 +11,7 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
 }else {
 
 	$sRoot = '/';
-	$sUrl = 'http://www.thomas-g.fr/';
+	$sUrl = 'http://thomas-g.fr/';
 	$sDossierLocal = '/';
 
 }

@@ -12,10 +12,13 @@ include_once 'reusable/header.php';
 		<img src="<?= IMG ?>logo.png" />
 		<h1>TELL ME IS JOB AND I WILL TELL YOU WHAT HE WANTS</h1>
 		<div class="search__form">
-			<select>
-				<option>
-					Lawyer
-				</option>
+			<input type="hidden" id="career-selected" />
+			<select id="career">
+				<?php foreach ($aCareer as $key => $sCareer) { ?>
+					<option value="<?= $sCareer ?>">
+						<?= $sCareer ?>
+					</option>
+				<?php } ?>
 			</select>
 			<button id="btn__search">OK</button>
 		</div>
@@ -51,8 +54,8 @@ include_once 'reusable/header.php';
 		<div id="arrow__back"><img src="<?= IMG ?>arrow.png" /></div>
 		<?php include 'reusable/panel.php'; ?>
 		<div id="diagram__goal" class="diagram goal">
-			<div class="label">
-				<span>Creative<br />art</span>
+			<div id="label__pie__chart" class="label">
+				<span>Lawyer</span>
 			</div>
 			<div class="label__circle">
 				<div id="pie-label-1">
@@ -66,7 +69,7 @@ include_once 'reusable/header.php';
 				<div id="pie-label-2">
 					<div class="perc">40 %</div>
 					<div class="gender__perc">40 %</div>
-					<div class="label">seem like a fun night out</div>
+					<div class="label">To meet new people</div>
 				</div>
 			</div>
 
@@ -74,7 +77,7 @@ include_once 'reusable/header.php';
 				<div id="pie-label-3">
 					<div class="perc">40 %</div>
 					<div class="gender__perc">40 %</div>
-					<div class="label">seem like a fun night out</div>
+					<div class="label">To say « i did it »</div>
 				</div>
 			</div>
 
@@ -82,7 +85,7 @@ include_once 'reusable/header.php';
 				<div id="pie-label-4">
 					<div class="perc">40 %</div>
 					<div class="gender__perc">40 %</div>
-					<div class="label">seem like a fun night out</div>
+					<div class="label">To get a date</div>
 				</div>
 			</div>
 
@@ -90,7 +93,7 @@ include_once 'reusable/header.php';
 				<div id="pie-label-5">
 					<div class="perc">40 %</div>
 					<div class="gender__perc">40 %</div>
-					<div class="label">seem like a fun night out</div>
+					<div class="label">Looking for a serious relationship</div>
 				</div>
 			</div>
 
@@ -98,7 +101,7 @@ include_once 'reusable/header.php';
 				<div id="pie-label-6">
 					<div class="perc">40 %</div>
 					<div class="gender__perc">40 %</div>
-					<div class="label">seem like a fun night out</div>
+					<div class="label">Other</div>
 				</div>
 			</div>
 			<canvas id="myCanvas" width="600" height="600" ></canvas>
@@ -111,7 +114,7 @@ include_once 'reusable/header.php';
 			interestedin dating you ?
 		</div>
 		<div id="label__self__confidence" class="label__self__confidence">
-			<span>Creative<br />art</span>
+			<span>Lawyer</span>
 		</div>
 		<div id="diagram__self__confidence" class="diagram self__confidence">
 
